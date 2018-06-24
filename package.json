@@ -4,7 +4,9 @@
   "description": "A bluebird wrapper for node-mysql",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/_mocha -R spec"
+    "tap": "tap",
+    "test": "tap test/*.js --100",
+    "coverage": "tap test/*.js --coverage-report=html"
   },
   "repository": {
     "type": "git",
@@ -36,11 +38,12 @@
     "url": "https://github.com/lukeb-uk/node-promise-mysql/issues"
   },
   "dependencies": {
-    "bluebird": "^3.5.0",
-    "mysql": "^2.14.1"
+    "bluebird": "^3.5.1",
+    "mysql": "^2.15.0"
   },
   "devDependencies": {
-    "chai": "^4.0.1",
-    "mocha": "^3.2.0"
+    "proxyquire": "^2.0.1",
+    "sinon": "^6.0.0",
+    "tap": "^12.0.1"
   }
 }
