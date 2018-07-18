@@ -1,6 +1,6 @@
 var Connection = require('./lib/connection.js');
 var Pool = require('./lib/pool.js');
-var poolCluster = require('./lib/poolCluster.js');
+var PoolCluster = require('./lib/poolCluster.js');
 var mysql = require('mysql');
 
 exports.createConnection = function(config){
@@ -11,8 +11,8 @@ exports.createPool = function(config){
     return new Pool(config);
 }
 
-exports.createPoolCluster = function(config){
-    return new poolCluster(config);
+exports.createPoolCluster = function(){
+    return new PoolCluster();
 }
 
 exports.Types = mysql.Types;
